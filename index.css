@@ -1,0 +1,51 @@
+body {
+  background-color: #eee;
+}
+
+.slider {
+  /* background-color: #fff; */
+  display: inline;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider__two {
+  position: absolute;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: black;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 80px;
+  border-radius: 34px;
+}
+
+.slider__two:before {
+  content: " ";
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  position: absolute;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+input:checked + .slider__two {
+  background-color: dimgray;
+}
+
+input:checked + .slider__two:before {
+  background-color: black;
+  -webkit-transform: translate(40px);
+          transform: translate(40px);
+}
+/*# sourceMappingURL=index.css.map */
